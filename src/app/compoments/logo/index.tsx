@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 
-import CarLogoImg from "../../../assets/images/car-logo.jpg";
+import CarLogoImg from "../../../assets/images/car-logo.png";
 import CarLogoDarkImg from "../../../assets/images/car-logo-dark.png";
 
 interface ILogoProps {
@@ -30,11 +30,11 @@ const LogoText = styled.div`
 
 const Image = styled.div`
   width: auto;
-  
+  ${tw`h-6 md:h-9`};
 
   img {
-    width: 160px;
-    height: auto;
+    width: auto;
+    height: 100%;
   }
 `;
 
@@ -46,6 +46,7 @@ export function Logo(props: ILogoProps) {
       <Image>
         <img src={bgColor === "dark" ? CarLogoDarkImg : CarLogoImg} />
       </Image>
+      <LogoText color={color || "dark"}>ECO AM-38</LogoText>
     </LogoContainer>
   );
 }
