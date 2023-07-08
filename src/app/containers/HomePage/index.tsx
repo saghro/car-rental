@@ -4,6 +4,7 @@
   import { Navbar } from "../../components/navbar";
 import { TopSection } from "./topSection";
 import { BookCard } from "../../components/bookCard";
+import { BookingSteps } from "./bookingSteps";
   const PageContainer = styled.div`
     ${tw`
       flex
@@ -21,6 +22,7 @@ import { BookCard } from "../../components/bookCard";
         <Navbar />
         <TopSection />
         <BookCard />
+        <BookingSteps />
       </PageContainer>
     );
   }
